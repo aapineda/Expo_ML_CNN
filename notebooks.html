@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+    <link rel="prev" title="CNN para Reconocimiento de Animales" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -151,7 +151,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to your Jupyter Book
+                    CNN para Reconocimiento de Animales
                 </a>
             </li>
         </ul>
@@ -410,20 +410,16 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Setup data inputs</span>
-<span class="n">image_size</span><span class="o">=</span> <span class="p">(</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">)</span>
-<span class="n">BATCH_SIZE</span> <span class="o">=</span> <span class="mi">64</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">test</span><span class="o">.</span><span class="n">is_gpu_available</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:tensorflow:From C:\Users\Rirub\AppData\Local\Temp\ipykernel_14324\337460670.py:1: is_gpu_available (from tensorflow.python.framework.test_util) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.config.list_physical_devices(&#39;GPU&#39;)` instead.
+</pre></div>
+</div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
@@ -710,7 +706,7 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/082978ccb71db031b4361c4e52f9547ec4ffed962bf3a1ee5395b3f056a0b49c.png" src="_images/082978ccb71db031b4361c4e52f9547ec4ffed962bf3a1ee5395b3f056a0b49c.png" />
+<img alt="_images/eb850be29a86329554a7d56e0168393331a1c2415d5b7df40f4a74398f51cc7e.png" src="_images/eb850be29a86329554a7d56e0168393331a1c2415d5b7df40f4a74398f51cc7e.png" />
 </div>
 </div>
 </section>
@@ -1156,49 +1152,17 @@ Test accuracy = 78.38541865348816%
 <h2>Matriz de Confusion<a class="headerlink" href="#matriz-de-confusion" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">training_set</span><span class="p">)</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">class_labels</span> <span class="o">=</span> <span class="n">test_set</span><span class="o">.</span><span class="n">class_indices</span>
-<span class="n">class_labels</span> <span class="o">=</span> <span class="p">{</span><span class="n">v</span><span class="p">:</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">class_labels</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
-
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">confusion_matrix</span>
-<span class="n">cm_train</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">training_set</span><span class="o">.</span><span class="n">classes</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Confusion Matrix&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cm_train</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Classification Report&#39;</span><span class="p">)</span>
-<span class="n">target_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">class_labels</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">training_set</span><span class="o">.</span><span class="n">classes</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">target_names</span><span class="p">))</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">cm_train</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
-<span class="n">tick_mark</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">target_names</span><span class="p">))</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">tick_mark</span><span class="p">,</span> <span class="n">target_names</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
-<span class="n">_</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">tick_mark</span><span class="p">,</span> <span class="n">target_names</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;cnn_model.h5&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200/200 [==============================] - 27s 133ms/step
-Confusion Matrix
-[[569 410 460 457]
- [432 279 282 338]
- [505 296 346 359]
- [526 346 388 404]]
-Classification Report
-              precision    recall  f1-score   support
-
-        cane       0.28      0.30      0.29      1896
-       gatto       0.21      0.21      0.21      1331
-       mucca       0.23      0.23      0.23      1506
-       ragno       0.26      0.24      0.25      1664
-
-    accuracy                           0.25      6397
-   macro avg       0.25      0.25      0.25      6397
-weighted avg       0.25      0.25      0.25      6397
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
 </pre></div>
 </div>
-<img alt="_images/3980af45db5507d5f1958f79729fcc3103c27926af659c1bf7f09aaf29dc43a9.png" src="_images/3980af45db5507d5f1958f79729fcc3103c27926af659c1bf7f09aaf29dc43a9.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1208,13 +1172,21 @@ weighted avg       0.25      0.25      0.25      6397
 
 <span class="n">g_dict</span> <span class="o">=</span> <span class="n">training_set</span><span class="o">.</span><span class="n">class_indices</span>
 <span class="n">classes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">g_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">class_labels</span> <span class="o">=</span> <span class="p">{</span><span class="n">v</span><span class="p">:</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">g_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
 
 <span class="c1"># Confusion matrix</span>
 <span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">training_set</span><span class="o">.</span><span class="n">classes</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Confusion Matrix&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cm</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Classification Report&#39;</span><span class="p">)</span>
+<span class="n">target_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">class_labels</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">training_set</span><span class="o">.</span><span class="n">classes</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">target_names</span><span class="p">))</span>
+
+
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span> <span class="s1">&#39;nearest&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Blues</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Confusion Matrix&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Confusion Matrix - Training&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
 
 <span class="n">tick_marks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">classes</span><span class="p">))</span>
@@ -1235,10 +1207,26 @@ weighted avg       0.25      0.25      0.25      6397
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200/200 [==============================] - 20s 101ms/step
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200/200 [==============================] - 21s 106ms/step
+Confusion Matrix
+[[633 389 433 441]
+ [408 289 295 339]
+ [490 316 336 364]
+ [516 353 407 388]]
+Classification Report
+              precision    recall  f1-score   support
+
+        cane       0.31      0.33      0.32      1896
+       gatto       0.21      0.22      0.22      1331
+       mucca       0.23      0.22      0.23      1506
+       ragno       0.25      0.23      0.24      1664
+
+    accuracy                           0.26      6397
+   macro avg       0.25      0.25      0.25      6397
+weighted avg       0.26      0.26      0.26      6397
 </pre></div>
 </div>
-<img alt="_images/a75c5ba29d524e410fe6443e3e9d608cf9d7186e5fd2e5bdcc80cc123f25ebbb.png" src="_images/a75c5ba29d524e410fe6443e3e9d608cf9d7186e5fd2e5bdcc80cc123f25ebbb.png" />
+<img alt="_images/0fec8f834b51fc0f7fd7d4d3b9442246544bae7f838f873e9cb8bd5bf8195fe8.png" src="_images/0fec8f834b51fc0f7fd7d4d3b9442246544bae7f838f873e9cb8bd5bf8195fe8.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1248,13 +1236,20 @@ weighted avg       0.25      0.25      0.25      6397
 
 <span class="n">g_dict</span> <span class="o">=</span> <span class="n">validation_set</span><span class="o">.</span><span class="n">class_indices</span>
 <span class="n">classes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">g_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">class_labels</span> <span class="o">=</span> <span class="p">{</span><span class="n">v</span><span class="p">:</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">g_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
 
 <span class="c1"># Confusion matrix</span>
 <span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">validation_set</span><span class="o">.</span><span class="n">classes</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Confusion Matrix&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cm</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Classification Report&#39;</span><span class="p">)</span>
+<span class="n">target_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">class_labels</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">validation_set</span><span class="o">.</span><span class="n">classes</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">target_names</span><span class="p">))</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span> <span class="s1">&#39;nearest&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Blues</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Confusion Matrix&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Confusion Matrix - Validacion&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
 
 <span class="n">tick_marks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">classes</span><span class="p">))</span>
@@ -1275,10 +1270,26 @@ weighted avg       0.25      0.25      0.25      6397
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>38/38 [==============================] - 4s 93ms/step
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>38/38 [==============================] - 5s 133ms/step
+Confusion Matrix
+[[100  82  67  81]
+ [ 84  53  55  72]
+ [112  53  52  57]
+ [110  72  77  73]]
+Classification Report
+              precision    recall  f1-score   support
+
+        cane       0.25      0.30      0.27       330
+       gatto       0.20      0.20      0.20       264
+       mucca       0.21      0.19      0.20       274
+       ragno       0.26      0.22      0.24       332
+
+    accuracy                           0.23      1200
+   macro avg       0.23      0.23      0.23      1200
+weighted avg       0.23      0.23      0.23      1200
 </pre></div>
 </div>
-<img alt="_images/cd2ff86d6ab5e85d4ee30e5e743a10d4b573519b73de80bb123a3ef9521509a6.png" src="_images/cd2ff86d6ab5e85d4ee30e5e743a10d4b573519b73de80bb123a3ef9521509a6.png" />
+<img alt="_images/f0e69576208c66d3bd9e44d2f2db374382aab0ac3d2af80251c7ea095e94bbbc.png" src="_images/f0e69576208c66d3bd9e44d2f2db374382aab0ac3d2af80251c7ea095e94bbbc.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1288,13 +1299,22 @@ weighted avg       0.25      0.25      0.25      6397
 
 <span class="n">g_dict</span> <span class="o">=</span> <span class="n">test_set</span><span class="o">.</span><span class="n">class_indices</span>
 <span class="n">classes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">g_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<span class="n">class_labels</span> <span class="o">=</span> <span class="p">{</span><span class="n">v</span><span class="p">:</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">g_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+
 
 <span class="c1"># Confusion matrix</span>
 <span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">test_set</span><span class="o">.</span><span class="n">classes</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Confusion Matrix&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cm</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Classification Report&#39;</span><span class="p">)</span>
+<span class="n">target_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">class_labels</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">test_set</span><span class="o">.</span><span class="n">classes</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">target_names</span><span class="p">))</span>
+
+
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span> <span class="s1">&#39;nearest&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Blues</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Confusion Matrix&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Confusion Matrix - Test&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
 
 <span class="n">tick_marks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">classes</span><span class="p">))</span>
@@ -1316,9 +1336,25 @@ weighted avg       0.25      0.25      0.25      6397
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13/13 [==============================] - 1s 100ms/step
+Confusion Matrix
+[[47 24 23 27]
+ [30 11 17 15]
+ [25 16 24 21]
+ [45 23 17 35]]
+Classification Report
+              precision    recall  f1-score   support
+
+        cane       0.32      0.39      0.35       121
+       gatto       0.15      0.15      0.15        73
+       mucca       0.30      0.28      0.29        86
+       ragno       0.36      0.29      0.32       120
+
+    accuracy                           0.29       400
+   macro avg       0.28      0.28      0.28       400
+weighted avg       0.29      0.29      0.29       400
 </pre></div>
 </div>
-<img alt="_images/341010910ba67a9d45a19152731a57ae5394ef3a910ce627b75cb978bb72daa1.png" src="_images/341010910ba67a9d45a19152731a57ae5394ef3a910ce627b75cb978bb72daa1.png" />
+<img alt="_images/2fcf978e5beda5f4fc9622f8e9e37f3e28ba3689cfb86c6ba3bf3d9d6c7be350.png" src="_images/2fcf978e5beda5f4fc9622f8e9e37f3e28ba3689cfb86c6ba3bf3d9d6c7be350.png" />
 </div>
 </div>
 </section>
@@ -1397,7 +1433,7 @@ weighted avg       0.25      0.25      0.25      6397
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Welcome to your Jupyter Book</p>
+        <p class="prev-next-title">CNN para Reconocimiento de Animales</p>
       </div>
     </a>
 </div></div>
