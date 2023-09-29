@@ -424,11 +424,6 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:tensorflow:From C:\Users\Rirub\AppData\Local\Temp\ipykernel_18948\337460670.py:1: is_gpu_available (from tensorflow.python.framework.test_util) is deprecated and will be removed in a future version.
-Instructions for updating:
-Use `tf.config.list_physical_devices(&#39;GPU&#39;)` instead.
-</pre></div>
-</div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 </pre></div>
 </div>
@@ -715,7 +710,7 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/733ae75eed478db2524c792d0d2116c901a1cd9a2202a3d74a7e7c0a5de3c41e.png" src="_images/733ae75eed478db2524c792d0d2116c901a1cd9a2202a3d74a7e7c0a5de3c41e.png" />
+<img alt="_images/082978ccb71db031b4361c4e52f9547ec4ffed962bf3a1ee5395b3f056a0b49c.png" src="_images/082978ccb71db031b4361c4e52f9547ec4ffed962bf3a1ee5395b3f056a0b49c.png" />
 </div>
 </div>
 </section>
@@ -760,12 +755,8 @@ Name: count, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found 6397 validated image filenames belonging to 4 classes.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found 1200 validated image filenames belonging to 4 classes.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found 400 validated image filenames belonging to 4 classes.
+Found 1200 validated image filenames belonging to 4 classes.
+Found 400 validated image filenames belonging to 4 classes.
 </pre></div>
 </div>
 </div>
@@ -833,205 +824,73 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model: &quot;sequential&quot;
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>_________________________________________________________________
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Layer (type)                Output Shape              Param #   
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=================================================================
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> conv2d (Conv2D)             (None, 128, 128, 64)      1088      
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> activation (Activation)     (None, 128, 128, 64)      0         
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> batch_normalization (BatchN  (None, 128, 128, 64)     256       
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> ormalization)                                                   
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> conv2d_1 (Conv2D)           (None, 128, 128, 64)      65600     
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> activation_1 (Activation)   (None, 128, 128, 64)      0         
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> batch_normalization_1 (Batc  (None, 128, 128, 64)     256       
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> hNormalization)                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> max_pooling2d (MaxPooling2D  (None, 64, 64, 64)       0         
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> )                                                               
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> dropout (Dropout)           (None, 64, 64, 64)        0         
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> conv2d_2 (Conv2D)           (None, 64, 64, 128)       131200    
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> activation_2 (Activation)   (None, 64, 64, 128)       0         
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> batch_normalization_2 (Batc  (None, 64, 64, 128)      512       
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> hNormalization)                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> max_pooling2d_1 (MaxPooling  (None, 32, 32, 128)      0         
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 2D)                                                             
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> dropout_1 (Dropout)         (None, 32, 32, 128)       0         
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> conv2d_3 (Conv2D)           (None, 32, 32, 128)       262272    
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> activation_3 (Activation)   (None, 32, 32, 128)       0         
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> batch_normalization_3 (Batc  (None, 32, 32, 128)      512       
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> hNormalization)                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> conv2d_4 (Conv2D)           (None, 32, 32, 128)       262272    
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> activation_4 (Activation)   (None, 32, 32, 128)       0         
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> batch_normalization_4 (Batc  (None, 32, 32, 128)      512       
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> hNormalization)                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> max_pooling2d_2 (MaxPooling  (None, 16, 16, 128)      0         
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 2D)                                                             
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> dropout_2 (Dropout)         (None, 16, 16, 128)       0         
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> flatten (Flatten)           (None, 32768)             0         
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> dense (Dense)               (None, 128)               4194432   
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> activation_5 (Activation)   (None, 128)               0         
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> dense_1 (Dense)             (None, 4)                 516       
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                                                 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=================================================================
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total params: 4,919,428
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Trainable params: 4,918,404
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Non-trainable params: 1,024
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>_________________________________________________________________
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model: &quot;sequential_1&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv2d_5 (Conv2D)           (None, 128, 128, 64)      1088      
+                                                                 
+ activation_6 (Activation)   (None, 128, 128, 64)      0         
+                                                                 
+ batch_normalization_5 (Batc  (None, 128, 128, 64)     256       
+ hNormalization)                                                 
+                                                                 
+ conv2d_6 (Conv2D)           (None, 128, 128, 64)      65600     
+                                                                 
+ activation_7 (Activation)   (None, 128, 128, 64)      0         
+                                                                 
+ batch_normalization_6 (Batc  (None, 128, 128, 64)     256       
+ hNormalization)                                                 
+                                                                 
+ max_pooling2d_3 (MaxPooling  (None, 64, 64, 64)       0         
+ 2D)                                                             
+                                                                 
+ dropout_3 (Dropout)         (None, 64, 64, 64)        0         
+                                                                 
+ conv2d_7 (Conv2D)           (None, 64, 64, 128)       131200    
+                                                                 
+ activation_8 (Activation)   (None, 64, 64, 128)       0         
+                                                                 
+ batch_normalization_7 (Batc  (None, 64, 64, 128)      512       
+ hNormalization)                                                 
+                                                                 
+ max_pooling2d_4 (MaxPooling  (None, 32, 32, 128)      0         
+ 2D)                                                             
+                                                                 
+ dropout_4 (Dropout)         (None, 32, 32, 128)       0         
+                                                                 
+ conv2d_8 (Conv2D)           (None, 32, 32, 128)       262272    
+                                                                 
+ activation_9 (Activation)   (None, 32, 32, 128)       0         
+                                                                 
+ batch_normalization_8 (Batc  (None, 32, 32, 128)      512       
+ hNormalization)                                                 
+                                                                 
+ conv2d_9 (Conv2D)           (None, 32, 32, 128)       262272    
+                                                                 
+ activation_10 (Activation)  (None, 32, 32, 128)       0         
+                                                                 
+ batch_normalization_9 (Batc  (None, 32, 32, 128)      512       
+ hNormalization)                                                 
+                                                                 
+ max_pooling2d_5 (MaxPooling  (None, 16, 16, 128)      0         
+ 2D)                                                             
+                                                                 
+ dropout_5 (Dropout)         (None, 16, 16, 128)       0         
+                                                                 
+ flatten_1 (Flatten)         (None, 32768)             0         
+                                                                 
+ dense_2 (Dense)             (None, 128)               4194432   
+                                                                 
+ activation_11 (Activation)  (None, 128)               0         
+                                                                 
+ dense_3 (Dense)             (None, 4)                 516       
+                                                                 
+=================================================================
+Total params: 4,919,428
+Trainable params: 4,918,404
+Non-trainable params: 1,024
+_________________________________________________________________
 </pre></div>
 </div>
 </div>
@@ -1043,7 +902,7 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/cc03d2e0cd5ba888d8733abb6671c5c8dfd613b44a2d33e7aa4e96a53649800f.png" src="_images/cc03d2e0cd5ba888d8733abb6671c5c8dfd613b44a2d33e7aa4e96a53649800f.png" />
+<img alt="_images/f7b0f3865c505f3fb428c87f5ff0c5995aa0e5fc442afe7450680da6daa5a5c6.png" src="_images/f7b0f3865c505f3fb428c87f5ff0c5995aa0e5fc442afe7450680da6daa5a5c6.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1080,235 +939,143 @@ Name: count, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch 1/75
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  1/199 [..............................] - ETA: 34:52 - loss: 3.3700 - accuracy: 0.2188
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-  2/199 [..............................] - ETA: 47s - loss: 22.5529 - accuracy: 0.2812 
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-  3/199 [..............................] - ETA: 1:35 - loss: 35.8079 - accuracy: 0.2188
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-  4/199 [..............................] - ETA: 1:42 - loss: 31.2330 - accuracy: 0.2500
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-  5/199 [..............................] - ETA: 1:47 - loss: 29.3613 - accuracy: 0.2500
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-  6/199 [..............................] - ETA: 1:51 - loss: 27.7489 - accuracy: 0.2500
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-  7/199 [&gt;.............................] - ETA: 1:53 - loss: 25.6897 - accuracy: 0.2634
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-  8/199 [&gt;.............................] - ETA: 2:05 - loss: 23.9044 - accuracy: 0.2578
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-  9/199 [&gt;.............................] - ETA: 2:05 - loss: 22.8262 - accuracy: 0.2604
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 10/199 [&gt;.............................] - ETA: 2:02 - loss: 22.1283 - accuracy: 0.2594
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 11/199 [&gt;.............................] - ETA: 2:03 - loss: 20.8039 - accuracy: 0.2727
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 12/199 [&gt;.............................] - ETA: 2:02 - loss: 19.4417 - accuracy: 0.2760
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 13/199 [&gt;.............................] - ETA: 2:02 - loss: 18.5277 - accuracy: 0.2861
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 14/199 [=&gt;............................] - ETA: 2:02 - loss: 17.7556 - accuracy: 0.2924
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 15/199 [=&gt;............................] - ETA: 2:00 - loss: 16.8987 - accuracy: 0.3063
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 16/199 [=&gt;............................] - ETA: 2:00 - loss: 16.2675 - accuracy: 0.3105
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 17/199 [=&gt;............................] - ETA: 2:00 - loss: 15.6486 - accuracy: 0.3070
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 18/199 [=&gt;............................] - ETA: 1:59 - loss: 15.1941 - accuracy: 0.3003
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 19/199 [=&gt;............................] - ETA: 1:58 - loss: 14.7290 - accuracy: 0.3076
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 20/199 [==&gt;...........................] - ETA: 1:57 - loss: 14.2705 - accuracy: 0.3078
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 21/199 [==&gt;...........................] - ETA: 1:57 - loss: 13.9095 - accuracy: 0.3021
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 22/199 [==&gt;...........................] - ETA: 1:56 - loss: 13.5594 - accuracy: 0.2940
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 23/199 [==&gt;...........................] - ETA: 1:56 - loss: 13.2326 - accuracy: 0.2867
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 24/199 [==&gt;...........................] - ETA: 1:57 - loss: 12.9951 - accuracy: 0.2799
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 25/199 [==&gt;...........................] - ETA: 1:57 - loss: 12.7287 - accuracy: 0.2837
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 26/199 [==&gt;...........................] - ETA: 1:56 - loss: 12.3358 - accuracy: 0.2825
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 27/199 [===&gt;..........................] - ETA: 1:55 - loss: 12.1361 - accuracy: 0.2824
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
- 28/199 [===&gt;..........................] - ETA: 1:54 - loss: 11.8283 - accuracy: 0.2846
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">training_set</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span>                  <span class="n">validation_data</span><span class="o">=</span><span class="n">validation_set</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>                  <span class="n">epochs</span><span class="o">=</span><span class="mi">75</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>                  <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">checkpointer</span><span class="p">],</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>                  <span class="n">steps_per_epoch</span><span class="o">=</span><span class="n">steps_per_epoch</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>                  <span class="n">validation_steps</span><span class="o">=</span><span class="n">validation_steps</span><span class="p">)</span>
+199/199 [==============================] - ETA: 0s - loss: 2.5818 - accuracy: 0.4093
+Epoch 1: val_accuracy improved from -inf to 0.30659, saving model to model.weights.best.hdf5
+199/199 [==============================] - 168s 830ms/step - loss: 2.5818 - accuracy: 0.4093 - val_loss: 1.6007 - val_accuracy: 0.3066
+Epoch 2/75
+199/199 [==============================] - ETA: 0s - loss: 1.1616 - accuracy: 0.5065
+Epoch 2: val_accuracy improved from 0.30659 to 0.34544, saving model to model.weights.best.hdf5
+199/199 [==============================] - 65s 323ms/step - loss: 1.1616 - accuracy: 0.5065 - val_loss: 1.7006 - val_accuracy: 0.3454
+Epoch 3/75
+199/199 [==============================] - ETA: 0s - loss: 1.0367 - accuracy: 0.5731
+Epoch 3: val_accuracy improved from 0.34544 to 0.47466, saving model to model.weights.best.hdf5
+199/199 [==============================] - 81s 405ms/step - loss: 1.0367 - accuracy: 0.5731 - val_loss: 1.3073 - val_accuracy: 0.4747
+Epoch 4/75
+199/199 [==============================] - ETA: 0s - loss: 0.9798 - accuracy: 0.5970
+Epoch 4: val_accuracy improved from 0.47466 to 0.61149, saving model to model.weights.best.hdf5
+199/199 [==============================] - 93s 469ms/step - loss: 0.9798 - accuracy: 0.5970 - val_loss: 0.9987 - val_accuracy: 0.6115
+Epoch 5/75
+199/199 [==============================] - ETA: 0s - loss: 0.9016 - accuracy: 0.6261
+Epoch 5: val_accuracy did not improve from 0.61149
+199/199 [==============================] - 121s 607ms/step - loss: 0.9016 - accuracy: 0.6261 - val_loss: 1.3169 - val_accuracy: 0.4139
+Epoch 6/75
+199/199 [==============================] - ETA: 0s - loss: 0.8662 - accuracy: 0.6545
+Epoch 6: val_accuracy improved from 0.61149 to 0.64611, saving model to model.weights.best.hdf5
+199/199 [==============================] - 162s 812ms/step - loss: 0.8662 - accuracy: 0.6545 - val_loss: 0.8672 - val_accuracy: 0.6461
+Epoch 7/75
+199/199 [==============================] - ETA: 0s - loss: 0.7632 - accuracy: 0.6977
+Epoch 7: val_accuracy improved from 0.64611 to 0.69172, saving model to model.weights.best.hdf5
+199/199 [==============================] - 90s 450ms/step - loss: 0.7632 - accuracy: 0.6977 - val_loss: 0.8364 - val_accuracy: 0.6917
+Epoch 8/75
+199/199 [==============================] - ETA: 0s - loss: 0.7342 - accuracy: 0.7180
+Epoch 8: val_accuracy did not improve from 0.69172
+199/199 [==============================] - 72s 363ms/step - loss: 0.7342 - accuracy: 0.7180 - val_loss: 0.8421 - val_accuracy: 0.6824
+Epoch 9/75
+199/199 [==============================] - ETA: 0s - loss: 0.6863 - accuracy: 0.7367
+Epoch 9: val_accuracy did not improve from 0.69172
+199/199 [==============================] - 110s 551ms/step - loss: 0.6863 - accuracy: 0.7367 - val_loss: 1.2783 - val_accuracy: 0.5684
+Epoch 10/75
+199/199 [==============================] - ETA: 0s - loss: 0.6380 - accuracy: 0.7555
+Epoch 10: val_accuracy improved from 0.69172 to 0.69426, saving model to model.weights.best.hdf5
+199/199 [==============================] - 215s 1s/step - loss: 0.6380 - accuracy: 0.7555 - val_loss: 0.8455 - val_accuracy: 0.6943
+Epoch 11/75
+199/199 [==============================] - ETA: 0s - loss: 0.6185 - accuracy: 0.7708
+Epoch 11: val_accuracy did not improve from 0.69426
+199/199 [==============================] - 209s 1s/step - loss: 0.6185 - accuracy: 0.7708 - val_loss: 0.9532 - val_accuracy: 0.6562
+Epoch 12/75
+199/199 [==============================] - ETA: 0s - loss: 0.5720 - accuracy: 0.7921
+Epoch 12: val_accuracy did not improve from 0.69426
+199/199 [==============================] - 314s 2s/step - loss: 0.5720 - accuracy: 0.7921 - val_loss: 1.0058 - val_accuracy: 0.6461
+Epoch 13/75
+199/199 [==============================] - ETA: 0s - loss: 0.5427 - accuracy: 0.7995
+Epoch 13: val_accuracy improved from 0.69426 to 0.71875, saving model to model.weights.best.hdf5
+199/199 [==============================] - 367s 2s/step - loss: 0.5427 - accuracy: 0.7995 - val_loss: 0.8038 - val_accuracy: 0.7188
+Epoch 14/75
+199/199 [==============================] - ETA: 0s - loss: 0.5319 - accuracy: 0.8115
+Epoch 14: val_accuracy did not improve from 0.71875
+199/199 [==============================] - 282s 1s/step - loss: 0.5319 - accuracy: 0.8115 - val_loss: 1.0013 - val_accuracy: 0.6917
+Epoch 15/75
+199/199 [==============================] - ETA: 0s - loss: 0.4875 - accuracy: 0.8283
+Epoch 15: val_accuracy did not improve from 0.71875
+199/199 [==============================] - 317s 2s/step - loss: 0.4875 - accuracy: 0.8283 - val_loss: 0.8409 - val_accuracy: 0.7128
+Epoch 16/75
+199/199 [==============================] - ETA: 0s - loss: 0.4647 - accuracy: 0.8449
+Epoch 16: val_accuracy did not improve from 0.71875
+199/199 [==============================] - 391s 2s/step - loss: 0.4647 - accuracy: 0.8449 - val_loss: 0.9451 - val_accuracy: 0.7069
+Epoch 17/75
+199/199 [==============================] - ETA: 0s - loss: 0.4296 - accuracy: 0.8581
+Epoch 17: val_accuracy did not improve from 0.71875
+199/199 [==============================] - 456s 2s/step - loss: 0.4296 - accuracy: 0.8581 - val_loss: 0.9284 - val_accuracy: 0.7078
+Epoch 18/75
+199/199 [==============================] - ETA: 0s - loss: 0.4150 - accuracy: 0.8704
+Epoch 18: val_accuracy improved from 0.71875 to 0.75422, saving model to model.weights.best.hdf5
+199/199 [==============================] - 862s 4s/step - loss: 0.4150 - accuracy: 0.8704 - val_loss: 0.7863 - val_accuracy: 0.7542
+Epoch 19/75
+199/199 [==============================] - ETA: 0s - loss: 0.3897 - accuracy: 0.8809
+Epoch 19: val_accuracy did not improve from 0.75422
+199/199 [==============================] - 548s 3s/step - loss: 0.3897 - accuracy: 0.8809 - val_loss: 0.9484 - val_accuracy: 0.7255
+Epoch 20/75
+199/199 [==============================] - ETA: 0s - loss: 0.3777 - accuracy: 0.8947
+Epoch 20: val_accuracy did not improve from 0.75422
+199/199 [==============================] - 309s 2s/step - loss: 0.3777 - accuracy: 0.8947 - val_loss: 1.0745 - val_accuracy: 0.7272
+Epoch 21/75
+199/199 [==============================] - ETA: 0s - loss: 0.3255 - accuracy: 0.9141
+Epoch 21: val_accuracy did not improve from 0.75422
+199/199 [==============================] - 88s 443ms/step - loss: 0.3255 - accuracy: 0.9141 - val_loss: 1.0914 - val_accuracy: 0.7306
+Epoch 22/75
+199/199 [==============================] - ETA: 0s - loss: 0.3539 - accuracy: 0.9027
+Epoch 22: val_accuracy did not improve from 0.75422
+199/199 [==============================] - 76s 380ms/step - loss: 0.3539 - accuracy: 0.9027 - val_loss: 1.2557 - val_accuracy: 0.6900
+Epoch 23/75
+199/199 [==============================] - ETA: 0s - loss: 0.3218 - accuracy: 0.9186
+Epoch 23: val_accuracy improved from 0.75422 to 0.75591, saving model to model.weights.best.hdf5
+199/199 [==============================] - 75s 374ms/step - loss: 0.3218 - accuracy: 0.9186 - val_loss: 0.9737 - val_accuracy: 0.7559
+Epoch 24/75
+199/199 [==============================] - ETA: 0s - loss: 0.3102 - accuracy: 0.9274
+Epoch 24: val_accuracy improved from 0.75591 to 0.78041, saving model to model.weights.best.hdf5
+199/199 [==============================] - 84s 414ms/step - loss: 0.3102 - accuracy: 0.9274 - val_loss: 0.8523 - val_accuracy: 0.7804
+Epoch 25/75
+199/199 [==============================] - ETA: 0s - loss: 0.3436 - accuracy: 0.9142
+Epoch 25: val_accuracy improved from 0.78041 to 0.78885, saving model to model.weights.best.hdf5
+199/199 [==============================] - 68s 341ms/step - loss: 0.3436 - accuracy: 0.9142 - val_loss: 0.8085 - val_accuracy: 0.7889
+Epoch 26/75
+199/199 [==============================] - ETA: 0s - loss: 0.2810 - accuracy: 0.9373
+Epoch 26: val_accuracy did not improve from 0.78885
+199/199 [==============================] - 60s 303ms/step - loss: 0.2810 - accuracy: 0.9373 - val_loss: 1.0272 - val_accuracy: 0.7753
+Epoch 27/75
+199/199 [==============================] - ETA: 0s - loss: 0.2772 - accuracy: 0.9442
+Epoch 27: val_accuracy did not improve from 0.78885
+199/199 [==============================] - 63s 314ms/step - loss: 0.2772 - accuracy: 0.9442 - val_loss: 1.3490 - val_accuracy: 0.7264
+Epoch 28/75
+199/199 [==============================] - ETA: 0s - loss: 0.2851 - accuracy: 0.9416
+Epoch 28: val_accuracy improved from 0.78885 to 0.79814, saving model to model.weights.best.hdf5
+199/199 [==============================] - 65s 328ms/step - loss: 0.2851 - accuracy: 0.9416 - val_loss: 0.8868 - val_accuracy: 0.7981
+Epoch 29/75
+199/199 [==============================] - ETA: 0s - loss: 0.2733 - accuracy: 0.9463
+Epoch 29: val_accuracy did not improve from 0.79814
+199/199 [==============================] - 61s 309ms/step - loss: 0.2733 - accuracy: 0.9463 - val_loss: 1.2026 - val_accuracy: 0.7559
+Epoch 30/75
+199/199 [==============================] - ETA: 0s - loss: 0.2575 - accuracy: 0.9527
+Epoch 30: val_accuracy did not improve from 0.79814
+199/199 [==============================] - 66s 330ms/step - loss: 0.2575 - accuracy: 0.9527 - val_loss: 1.0596 - val_accuracy: 0.7720
+Epoch 31/75
+199/199 [==============================] - ETA: 0s - loss: 0.2710 - accuracy: 0.9499
+Epoch 31: val_accuracy did not improve from 0.79814
+199/199 [==============================] - 63s 314ms/step - loss: 0.2710 - accuracy: 0.9499 - val_loss: 1.1921 - val_accuracy: 0.7660
+Epoch 32/75
+199/199 [==============================] - ETA: 0s - loss: 0.2747 - accuracy: 0.9497
+Epoch 32: val_accuracy did not improve from 0.79814
+199/199 [==============================] - 62s 311ms/step - loss: 0.2747 - accuracy: 0.9497 - val_loss: 0.9975 - val_accuracy: 0.7720
+Epoch 33/75
+199/199 [==============================] - ETA: 0s - loss: 0.2933 - accuracy: 0.9444
+Epoch 33: val_accuracy did not improve from 0.79814
+199/199 [==============================] - 63s 317ms/step - loss: 0.2933 - accuracy: 0.9444 - val_loss: 1.1854 - val_accuracy: 0.7559
+Epoch 34/75
+199/199 [==============================] - ETA: 0s - loss: 0.2823 - accuracy: 0.9532Restoring model weights from the end of the best epoch: 28.
 
-<span class="nn">File ~\miniconda3\envs\ml_venv\lib\site-packages\keras\utils\traceback_utils.py:65,</span> in <span class="ni">filter_traceback.&lt;locals&gt;.error_handler</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span> <span class="n">filtered_tb</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="g g-Whitespace">     </span><span class="mi">64</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">65</span>     <span class="k">return</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">66</span> <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span>     <span class="n">filtered_tb</span> <span class="o">=</span> <span class="n">_process_traceback_frames</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">__traceback__</span><span class="p">)</span>
-
-<span class="nn">File ~\miniconda3\envs\ml_venv\lib\site-packages\keras\engine\training.py:1570,</span> in <span class="ni">Model.fit</span><span class="nt">(self, x, y, batch_size, epochs, verbose, callbacks, validation_split, validation_data, shuffle, class_weight, sample_weight, initial_epoch, steps_per_epoch, validation_steps, validation_batch_size, validation_freq, max_queue_size, workers, use_multiprocessing)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1568</span> <span class="n">logs</span> <span class="o">=</span> <span class="n">tmp_logs</span>
-<span class="g g-Whitespace">   </span><span class="mi">1569</span> <span class="n">end_step</span> <span class="o">=</span> <span class="n">step</span> <span class="o">+</span> <span class="n">data_handler</span><span class="o">.</span><span class="n">step_increment</span>
-<span class="ne">-&gt; </span><span class="mi">1570</span> <span class="n">callbacks</span><span class="o">.</span><span class="n">on_train_batch_end</span><span class="p">(</span><span class="n">end_step</span><span class="p">,</span> <span class="n">logs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1571</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">stop_training</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1572</span>     <span class="k">break</span>
-
-<span class="nn">File ~\miniconda3\envs\ml_venv\lib\site-packages\keras\callbacks.py:470,</span> in <span class="ni">CallbackList.on_train_batch_end</span><span class="nt">(self, batch, logs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">463</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Calls the `on_train_batch_end` methods of its callbacks.</span>
-<span class="g g-Whitespace">    </span><span class="mi">464</span><span class="sd"> </span>
-<span class="g g-Whitespace">    </span><span class="mi">465</span><span class="sd"> Args:</span>
-<span class="g g-Whitespace">    </span><span class="mi">466</span><span class="sd">     batch: Integer, index of batch within the current epoch.</span>
-<span class="g g-Whitespace">    </span><span class="mi">467</span><span class="sd">     logs: Dict. Aggregated metric results up until this batch.</span>
-<span class="g g-Whitespace">    </span><span class="mi">468</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">469</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_should_call_train_batch_hooks</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">470</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_call_batch_hook</span><span class="p">(</span><span class="n">ModeKeys</span><span class="o">.</span><span class="n">TRAIN</span><span class="p">,</span> <span class="s2">&quot;end&quot;</span><span class="p">,</span> <span class="n">batch</span><span class="p">,</span> <span class="n">logs</span><span class="o">=</span><span class="n">logs</span><span class="p">)</span>
-
-<span class="nn">File ~\miniconda3\envs\ml_venv\lib\site-packages\keras\callbacks.py:317,</span> in <span class="ni">CallbackList._call_batch_hook</span><span class="nt">(self, mode, hook, batch, logs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">315</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_call_batch_begin_hook</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="n">batch</span><span class="p">,</span> <span class="n">logs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">316</span> <span class="k">elif</span> <span class="n">hook</span> <span class="o">==</span> <span class="s2">&quot;end&quot;</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">317</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_call_batch_end_hook</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="n">batch</span><span class="p">,</span> <span class="n">logs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">318</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">320</span>         <span class="sa">f</span><span class="s2">&quot;Unrecognized hook: </span><span class="si">{</span><span class="n">hook</span><span class="si">}</span><span class="s2">. &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">321</span>         <span class="s1">&#39;Expected values are [&quot;begin&quot;, &quot;end&quot;]&#39;</span>
-<span class="g g-Whitespace">    </span><span class="mi">322</span>     <span class="p">)</span>
-
-<span class="nn">File ~\miniconda3\envs\ml_venv\lib\site-packages\keras\callbacks.py:340,</span> in <span class="ni">CallbackList._call_batch_end_hook</span><span class="nt">(self, mode, batch, logs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">337</span>     <span class="n">batch_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">_batch_start_time</span>
-<span class="g g-Whitespace">    </span><span class="mi">338</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_batch_times</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">batch_time</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">340</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_batch_hook_helper</span><span class="p">(</span><span class="n">hook_name</span><span class="p">,</span> <span class="n">batch</span><span class="p">,</span> <span class="n">logs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">342</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_batch_times</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_num_batches_for_timing_check</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">343</span>     <span class="n">end_hook_name</span> <span class="o">=</span> <span class="n">hook_name</span>
-
-<span class="nn">File ~\miniconda3\envs\ml_venv\lib\site-packages\keras\callbacks.py:388,</span> in <span class="ni">CallbackList._call_batch_hook_helper</span><span class="nt">(self, hook_name, batch, logs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">386</span> <span class="k">for</span> <span class="n">callback</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">callbacks</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">387</span>     <span class="n">hook</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">callback</span><span class="p">,</span> <span class="n">hook_name</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">388</span>     <span class="n">hook</span><span class="p">(</span><span class="n">batch</span><span class="p">,</span> <span class="n">logs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">390</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_check_timing</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">391</span>     <span class="k">if</span> <span class="n">hook_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_hook_times</span><span class="p">:</span>
-
-<span class="nn">File ~\miniconda3\envs\ml_venv\lib\site-packages\keras\callbacks.py:1081,</span> in <span class="ni">ProgbarLogger.on_train_batch_end</span><span class="nt">(self, batch, logs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1080</span> <span class="k">def</span> <span class="nf">on_train_batch_end</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch</span><span class="p">,</span> <span class="n">logs</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">1081</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_batch_update_progbar</span><span class="p">(</span><span class="n">batch</span><span class="p">,</span> <span class="n">logs</span><span class="p">)</span>
-
-<span class="nn">File ~\miniconda3\envs\ml_venv\lib\site-packages\keras\callbacks.py:1157,</span> in <span class="ni">ProgbarLogger._batch_update_progbar</span><span class="nt">(self, batch, logs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1153</span>     <span class="bp">self</span><span class="o">.</span><span class="n">seen</span> <span class="o">+=</span> <span class="n">add_seen</span>
-<span class="g g-Whitespace">   </span><span class="mi">1155</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1156</span>     <span class="c1"># Only block async when verbose = 1.</span>
-<span class="ne">-&gt; </span><span class="mi">1157</span>     <span class="n">logs</span> <span class="o">=</span> <span class="n">tf_utils</span><span class="o">.</span><span class="n">sync_to_numpy_or_python_type</span><span class="p">(</span><span class="n">logs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1158</span>     <span class="bp">self</span><span class="o">.</span><span class="n">progbar</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">seen</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">logs</span><span class="o">.</span><span class="n">items</span><span class="p">()),</span> <span class="n">finalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="nn">File ~\miniconda3\envs\ml_venv\lib\site-packages\keras\utils\tf_utils.py:635,</span> in <span class="ni">sync_to_numpy_or_python_type</span><span class="nt">(tensors)</span>
-<span class="g g-Whitespace">    </span><span class="mi">632</span>         <span class="k">return</span> <span class="n">t</span>
-<span class="g g-Whitespace">    </span><span class="mi">633</span>     <span class="k">return</span> <span class="n">t</span><span class="o">.</span><span class="n">item</span><span class="p">()</span> <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">ndim</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">t</span>
-<span class="ne">--&gt; </span><span class="mi">635</span> <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">nest</span><span class="o">.</span><span class="n">map_structure</span><span class="p">(</span><span class="n">_to_single_numpy_or_python_type</span><span class="p">,</span> <span class="n">tensors</span><span class="p">)</span>
-
-<span class="nn">File ~\miniconda3\envs\ml_venv\lib\site-packages\tensorflow\python\util\nest.py:917,</span> in <span class="ni">map_structure</span><span class="nt">(func, *structure, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">913</span> <span class="n">flat_structure</span> <span class="o">=</span> <span class="p">(</span><span class="n">flatten</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">expand_composites</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">structure</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">914</span> <span class="n">entries</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">flat_structure</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">916</span> <span class="k">return</span> <span class="n">pack_sequence_as</span><span class="p">(</span>
-<span class="ne">--&gt; </span><span class="mi">917</span>     <span class="n">structure</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">],</span>
-<span class="g g-Whitespace">    </span><span class="mi">918</span>     <span class="n">expand_composites</span><span class="o">=</span><span class="n">expand_composites</span><span class="p">)</span>
-
-<span class="nn">File ~\miniconda3\envs\ml_venv\lib\site-packages\tensorflow\python\util\nest.py:917,</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
-<span class="g g-Whitespace">    </span><span class="mi">913</span> <span class="n">flat_structure</span> <span class="o">=</span> <span class="p">(</span><span class="n">flatten</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">expand_composites</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">structure</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">914</span> <span class="n">entries</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">flat_structure</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">916</span> <span class="k">return</span> <span class="n">pack_sequence_as</span><span class="p">(</span>
-<span class="ne">--&gt; </span><span class="mi">917</span>     <span class="n">structure</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">entries</span><span class="p">],</span>
-<span class="g g-Whitespace">    </span><span class="mi">918</span>     <span class="n">expand_composites</span><span class="o">=</span><span class="n">expand_composites</span><span class="p">)</span>
-
-<span class="nn">File ~\miniconda3\envs\ml_venv\lib\site-packages\keras\utils\tf_utils.py:628,</span> in <span class="ni">sync_to_numpy_or_python_type.&lt;locals&gt;._to_single_numpy_or_python_type</span><span class="nt">(t)</span>
-<span class="g g-Whitespace">    </span><span class="mi">625</span> <span class="k">def</span> <span class="nf">_to_single_numpy_or_python_type</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">626</span>     <span class="c1"># Don&#39;t turn ragged or sparse tensors to NumPy.</span>
-<span class="g g-Whitespace">    </span><span class="mi">627</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">Tensor</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">628</span>         <span class="n">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">629</span>     <span class="c1"># Strings, ragged and sparse tensors don&#39;t have .item(). Return them</span>
-<span class="g g-Whitespace">    </span><span class="mi">630</span>     <span class="c1"># as-is.</span>
-<span class="g g-Whitespace">    </span><span class="mi">631</span>     <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">generic</span><span class="p">)):</span>
-
-<span class="nn">File ~\miniconda3\envs\ml_venv\lib\site-packages\tensorflow\python\framework\ops.py:1157,</span> in <span class="ni">_EagerTensorBase.numpy</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1134</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Copy of the contents of this Tensor into a NumPy array or scalar.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1135</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1136</span><span class="sd"> Unlike NumPy arrays, Tensors are immutable, so this method has to copy</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1154</span><span class="sd">     NumPy dtype.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1155</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1156</span> <span class="c1"># TODO(slebedev): Consider avoiding a copy for non-CPU or remote tensors.</span>
-<span class="ne">-&gt; </span><span class="mi">1157</span> <span class="n">maybe_arr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_numpy</span><span class="p">()</span>  <span class="c1"># pylint: disable=protected-access</span>
-<span class="g g-Whitespace">   </span><span class="mi">1158</span> <span class="k">return</span> <span class="n">maybe_arr</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">maybe_arr</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="k">else</span> <span class="n">maybe_arr</span>
-
-<span class="nn">File ~\miniconda3\envs\ml_venv\lib\site-packages\tensorflow\python\framework\ops.py:1123,</span> in <span class="ni">_EagerTensorBase._numpy</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1121</span> <span class="k">def</span> <span class="nf">_numpy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">1122</span>   <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1123</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_numpy_internal</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1124</span>   <span class="k">except</span> <span class="n">core</span><span class="o">.</span><span class="n">_NotOkStatusException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>  <span class="c1"># pylint: disable=protected-access</span>
-<span class="g g-Whitespace">   </span><span class="mi">1125</span>     <span class="k">raise</span> <span class="n">core</span><span class="o">.</span><span class="n">_status_to_exception</span><span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
+Epoch 34: val_accuracy did not improve from 0.79814
+199/199 [==============================] - 62s 312ms/step - loss: 0.2823 - accuracy: 0.9532 - val_loss: 0.9733 - val_accuracy: 0.7863
+Epoch 34: early stopping
 </pre></div>
 </div>
 </div>
