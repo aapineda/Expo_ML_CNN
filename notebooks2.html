@@ -61,9 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Modelo para edad" href="MODEL_Age_DG.html" />
+    <link rel="prev" title="CNN para Reconocimiento de Animales y Edad de Edificaciones" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -154,8 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="notebooks2.html">Reconocimiento de Animales</a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Reconocimiento de Animales</a></li>
 <li class="toctree-l1"><a class="reference internal" href="MODEL_Age_DG.html">Modelo para edad</a></li>
 </ul>
 
@@ -228,7 +230,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks2.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -258,7 +260,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/notebooks.ipynb" target="_blank"
+      <li><a href="_sources/notebooks2.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -415,7 +417,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:tensorflow:From C:\Users\Rirub\AppData\Local\Temp\ipykernel_14324\337460670.py:1: is_gpu_available (from tensorflow.python.framework.test_util) is deprecated and will be removed in a future version.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:tensorflow:From C:\Users\Rirub\AppData\Local\Temp\ipykernel_23840\337460670.py:1: is_gpu_available (from tensorflow.python.framework.test_util) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use `tf.config.list_physical_devices(&#39;GPU&#39;)` instead.
 </pre></div>
@@ -602,8 +604,8 @@ Name: count, dtype: int64
 <h2>Test y Entrenamiento<a class="headerlink" href="#test-y-entrenamiento" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_df</span><span class="p">,</span> <span class="n">Temp_df</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df</span><span class="p">,</span>  <span class="n">train_size</span><span class="o">=</span> <span class="mf">0.80</span> <span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">23</span><span class="p">)</span>
-<span class="n">valid_df</span> <span class="p">,</span> <span class="n">test_df</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">Temp_df</span> <span class="p">,</span>  <span class="n">train_size</span><span class="o">=</span> <span class="mf">0.75</span> <span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">23</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">train_df</span><span class="p">,</span> <span class="n">Temp_df</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df</span><span class="p">,</span>  <span class="n">train_size</span><span class="o">=</span> <span class="mf">0.75</span> <span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">23</span><span class="p">)</span>
+<span class="n">valid_df</span> <span class="p">,</span> <span class="n">test_df</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">Temp_df</span> <span class="p">,</span>  <span class="n">train_size</span><span class="o">=</span> <span class="mf">0.6</span> <span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">23</span><span class="p">)</span>
 <span class="n">train_df</span> <span class="o">=</span> <span class="n">train_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">valid_df</span> <span class="o">=</span> <span class="n">valid_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">test_df</span> <span class="o">=</span> <span class="n">test_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -628,28 +630,28 @@ Name: count, dtype: int64
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>----------Train-------------
                                              imgpath labels
-0  D:/datasets/ANIMALES RED/ragno\OIP-r2C-MsShyT8...  ragno
-1  D:/datasets/ANIMALES RED/mucca\OIP-CA4CXmzLyuH...  mucca
-2  D:/datasets/ANIMALES RED/cane\OIP-U4uI7R0SWKKB...   cane
-3  D:/datasets/ANIMALES RED/mucca\OIP-LczqZjufUmk...  mucca
-4  D:/datasets/ANIMALES RED/ragno\OIP-Ogt5Yd8Ouit...  ragno
-(6397, 3)
+0  D:/datasets/ANIMALES RED/cane\OIP-Y6B78QaOUn4q...   cane
+1  D:/datasets/ANIMALES RED/ragno\OIP-TucUistkkPW...  ragno
+2  D:/datasets/ANIMALES RED/ragno\OIP-Uk9jVHuzqKq...  ragno
+3  D:/datasets/ANIMALES RED/mucca\OIP-vSpxIjbOOji...  mucca
+4           D:/datasets/ANIMALES RED/gatto\1477.jpeg  gatto
+(5997, 3)
 --------Validation----------
                                              imgpath labels
-0  D:/datasets/ANIMALES RED/ragno\OIP-pGihxbFt0b1...  ragno
-1  D:/datasets/ANIMALES RED/mucca\OIP-lEqCbGfRJ17...  mucca
-2            D:/datasets/ANIMALES RED/gatto\942.jpeg  gatto
-3  D:/datasets/ANIMALES RED/mucca\OIP-88viiIkkE5y...  mucca
-4  D:/datasets/ANIMALES RED/cane\OIP-POHuPgRqMu0A...   cane
+0  D:/datasets/ANIMALES RED/ragno\OIP-wcYX17cyRNv...  ragno
+1  D:/datasets/ANIMALES RED/ragno\OIP-szmk-9ImYlZ...  ragno
+2  D:/datasets/ANIMALES RED/ragno\OIP-rX9_RRCh7Te...  ragno
+3  D:/datasets/ANIMALES RED/ragno\OIP-MM41xzjWNxV...  ragno
+4  D:/datasets/ANIMALES RED/ragno\OIP-olemVESRVfB...  ragno
 (1200, 3)
 ----------Test--------------
                                              imgpath labels
-0  D:/datasets/ANIMALES RED/cane\OIP-ue-Dlsitayfp...   cane
-1  D:/datasets/ANIMALES RED/ragno\OIP-Vo7oj39_hrp...  ragno
-2  D:/datasets/ANIMALES RED/mucca\OIP-xOGvUjYRIiG...  mucca
-3  D:/datasets/ANIMALES RED/ragno\OIP-kQ5F978_z7u...  ragno
-4  D:/datasets/ANIMALES RED/cane\OIP-MaPRZQq47w_0...   cane
-(400, 3)
+0  D:/datasets/ANIMALES RED/ragno\OIP-uas3AwpS29H...  ragno
+1            D:/datasets/ANIMALES RED/gatto\301.jpeg  gatto
+2  D:/datasets/ANIMALES RED/ragno\OIP-QCHOnriD3Qf...  ragno
+3  D:/datasets/ANIMALES RED/cane\OIP-pXRE6P-U4ORc...   cane
+4  D:/datasets/ANIMALES RED/mucca\OIP-dMeYaM8lBN6...  mucca
+(800, 3)
 </pre></div>
 </div>
 </div>
@@ -667,7 +669,7 @@ Name: count, dtype: int64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Distribución de Clases&#39;)
 </pre></div>
 </div>
-<img alt="_images/b670ed210bb7f99b8539257cca831bcc4629c60deebc648614c6216d112039e5.png" src="_images/b670ed210bb7f99b8539257cca831bcc4629c60deebc648614c6216d112039e5.png" />
+<img alt="_images/2c423e0d63b3efc4cad28f0aac08c0426a8ef9b70f4040b94e43e115aa4c6a45.png" src="_images/2c423e0d63b3efc4cad28f0aac08c0426a8ef9b70f4040b94e43e115aa4c6a45.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -683,7 +685,7 @@ Name: count, dtype: int64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Distribución de Clases - Conjunto de Test&#39;)
 </pre></div>
 </div>
-<img alt="_images/0a3434587ddd89583264e41f38c90372b3670a90169f350f600ea2baa6540847.png" src="_images/0a3434587ddd89583264e41f38c90372b3670a90169f350f600ea2baa6540847.png" />
+<img alt="_images/359d6ac36db9a94ef5877ebe3b55ad06930abbc514e478911356fc16765fef0e.png" src="_images/359d6ac36db9a94ef5877ebe3b55ad06930abbc514e478911356fc16765fef0e.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -706,7 +708,7 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/eb850be29a86329554a7d56e0168393331a1c2415d5b7df40f4a74398f51cc7e.png" src="_images/eb850be29a86329554a7d56e0168393331a1c2415d5b7df40f4a74398f51cc7e.png" />
+<img alt="_images/ff03b3dad3cd8641bb78026587209aff016bae4322da5879a705a1c6bae10b43.png" src="_images/ff03b3dad3cd8641bb78026587209aff016bae4322da5879a705a1c6bae10b43.png" />
 </div>
 </div>
 </section>
@@ -750,9 +752,9 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found 6397 validated image filenames belonging to 4 classes.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Found 5997 validated image filenames belonging to 4 classes.
 Found 1200 validated image filenames belonging to 4 classes.
-Found 400 validated image filenames belonging to 4 classes.
+Found 800 validated image filenames belonging to 4 classes.
 </pre></div>
 </div>
 </div>
@@ -820,67 +822,67 @@ Found 400 validated image filenames belonging to 4 classes.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model: &quot;sequential_1&quot;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model: &quot;sequential&quot;
 _________________________________________________________________
  Layer (type)                Output Shape              Param #   
 =================================================================
- conv2d_5 (Conv2D)           (None, 128, 128, 64)      1088      
+ conv2d (Conv2D)             (None, 128, 128, 64)      1088      
                                                                  
- activation_6 (Activation)   (None, 128, 128, 64)      0         
+ activation (Activation)     (None, 128, 128, 64)      0         
                                                                  
- batch_normalization_5 (Batc  (None, 128, 128, 64)     256       
+ batch_normalization (BatchN  (None, 128, 128, 64)     256       
+ ormalization)                                                   
+                                                                 
+ conv2d_1 (Conv2D)           (None, 128, 128, 64)      65600     
+                                                                 
+ activation_1 (Activation)   (None, 128, 128, 64)      0         
+                                                                 
+ batch_normalization_1 (Batc  (None, 128, 128, 64)     256       
  hNormalization)                                                 
                                                                  
- conv2d_6 (Conv2D)           (None, 128, 128, 64)      65600     
+ max_pooling2d (MaxPooling2D  (None, 64, 64, 64)       0         
+ )                                                               
                                                                  
- activation_7 (Activation)   (None, 128, 128, 64)      0         
+ dropout (Dropout)           (None, 64, 64, 64)        0         
                                                                  
- batch_normalization_6 (Batc  (None, 128, 128, 64)     256       
+ conv2d_2 (Conv2D)           (None, 64, 64, 128)       131200    
+                                                                 
+ activation_2 (Activation)   (None, 64, 64, 128)       0         
+                                                                 
+ batch_normalization_2 (Batc  (None, 64, 64, 128)      512       
  hNormalization)                                                 
                                                                  
- max_pooling2d_3 (MaxPooling  (None, 64, 64, 64)       0         
+ max_pooling2d_1 (MaxPooling  (None, 32, 32, 128)      0         
  2D)                                                             
                                                                  
- dropout_3 (Dropout)         (None, 64, 64, 64)        0         
+ dropout_1 (Dropout)         (None, 32, 32, 128)       0         
                                                                  
- conv2d_7 (Conv2D)           (None, 64, 64, 128)       131200    
+ conv2d_3 (Conv2D)           (None, 32, 32, 128)       262272    
                                                                  
- activation_8 (Activation)   (None, 64, 64, 128)       0         
+ activation_3 (Activation)   (None, 32, 32, 128)       0         
                                                                  
- batch_normalization_7 (Batc  (None, 64, 64, 128)      512       
+ batch_normalization_3 (Batc  (None, 32, 32, 128)      512       
  hNormalization)                                                 
                                                                  
- max_pooling2d_4 (MaxPooling  (None, 32, 32, 128)      0         
+ conv2d_4 (Conv2D)           (None, 32, 32, 128)       262272    
+                                                                 
+ activation_4 (Activation)   (None, 32, 32, 128)       0         
+                                                                 
+ batch_normalization_4 (Batc  (None, 32, 32, 128)      512       
+ hNormalization)                                                 
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 16, 16, 128)      0         
  2D)                                                             
                                                                  
- dropout_4 (Dropout)         (None, 32, 32, 128)       0         
+ dropout_2 (Dropout)         (None, 16, 16, 128)       0         
                                                                  
- conv2d_8 (Conv2D)           (None, 32, 32, 128)       262272    
+ flatten (Flatten)           (None, 32768)             0         
                                                                  
- activation_9 (Activation)   (None, 32, 32, 128)       0         
+ dense (Dense)               (None, 128)               4194432   
                                                                  
- batch_normalization_8 (Batc  (None, 32, 32, 128)      512       
- hNormalization)                                                 
+ activation_5 (Activation)   (None, 128)               0         
                                                                  
- conv2d_9 (Conv2D)           (None, 32, 32, 128)       262272    
-                                                                 
- activation_10 (Activation)  (None, 32, 32, 128)       0         
-                                                                 
- batch_normalization_9 (Batc  (None, 32, 32, 128)      512       
- hNormalization)                                                 
-                                                                 
- max_pooling2d_5 (MaxPooling  (None, 16, 16, 128)      0         
- 2D)                                                             
-                                                                 
- dropout_5 (Dropout)         (None, 16, 16, 128)       0         
-                                                                 
- flatten_1 (Flatten)         (None, 32768)             0         
-                                                                 
- dense_2 (Dense)             (None, 128)               4194432   
-                                                                 
- activation_11 (Activation)  (None, 128)               0         
-                                                                 
- dense_3 (Dense)             (None, 4)                 516       
+ dense_1 (Dense)             (None, 4)                 516       
                                                                  
 =================================================================
 Total params: 4,919,428
@@ -898,7 +900,7 @@ _________________________________________________________________
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/f7b0f3865c505f3fb428c87f5ff0c5995aa0e5fc442afe7450680da6daa5a5c6.png" src="_images/f7b0f3865c505f3fb428c87f5ff0c5995aa0e5fc442afe7450680da6daa5a5c6.png" />
+<img alt="_images/cc03d2e0cd5ba888d8733abb6671c5c8dfd613b44a2d33e7aa4e96a53649800f.png" src="_images/cc03d2e0cd5ba888d8733abb6671c5c8dfd613b44a2d33e7aa4e96a53649800f.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -935,143 +937,115 @@ _________________________________________________________________
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epoch 1/75
-199/199 [==============================] - ETA: 0s - loss: 2.5818 - accuracy: 0.4093
-Epoch 1: val_accuracy improved from -inf to 0.30659, saving model to model.weights.best.hdf5
-199/199 [==============================] - 168s 830ms/step - loss: 2.5818 - accuracy: 0.4093 - val_loss: 1.6007 - val_accuracy: 0.3066
+187/187 [==============================] - ETA: 0s - loss: 2.3050 - accuracy: 0.4069
+Epoch 1: val_accuracy improved from -inf to 0.31757, saving model to model.weights.best.hdf5
+187/187 [==============================] - 165s 826ms/step - loss: 2.3050 - accuracy: 0.4069 - val_loss: 3.2007 - val_accuracy: 0.3176
 Epoch 2/75
-199/199 [==============================] - ETA: 0s - loss: 1.1616 - accuracy: 0.5065
-Epoch 2: val_accuracy improved from 0.30659 to 0.34544, saving model to model.weights.best.hdf5
-199/199 [==============================] - 65s 323ms/step - loss: 1.1616 - accuracy: 0.5065 - val_loss: 1.7006 - val_accuracy: 0.3454
+187/187 [==============================] - ETA: 0s - loss: 1.1331 - accuracy: 0.5108
+Epoch 2: val_accuracy did not improve from 0.31757
+187/187 [==============================] - 48s 258ms/step - loss: 1.1331 - accuracy: 0.5108 - val_loss: 1.9649 - val_accuracy: 0.3167
 Epoch 3/75
-199/199 [==============================] - ETA: 0s - loss: 1.0367 - accuracy: 0.5731
-Epoch 3: val_accuracy improved from 0.34544 to 0.47466, saving model to model.weights.best.hdf5
-199/199 [==============================] - 81s 405ms/step - loss: 1.0367 - accuracy: 0.5731 - val_loss: 1.3073 - val_accuracy: 0.4747
+187/187 [==============================] - ETA: 0s - loss: 1.0004 - accuracy: 0.5807
+Epoch 3: val_accuracy improved from 0.31757 to 0.45777, saving model to model.weights.best.hdf5
+187/187 [==============================] - 50s 267ms/step - loss: 1.0004 - accuracy: 0.5807 - val_loss: 2.0979 - val_accuracy: 0.4578
 Epoch 4/75
-199/199 [==============================] - ETA: 0s - loss: 0.9798 - accuracy: 0.5970
-Epoch 4: val_accuracy improved from 0.47466 to 0.61149, saving model to model.weights.best.hdf5
-199/199 [==============================] - 93s 469ms/step - loss: 0.9798 - accuracy: 0.5970 - val_loss: 0.9987 - val_accuracy: 0.6115
+187/187 [==============================] - ETA: 0s - loss: 0.8918 - accuracy: 0.6397
+Epoch 4: val_accuracy improved from 0.45777 to 0.62331, saving model to model.weights.best.hdf5
+187/187 [==============================] - 52s 278ms/step - loss: 0.8918 - accuracy: 0.6397 - val_loss: 0.9543 - val_accuracy: 0.6233
 Epoch 5/75
-199/199 [==============================] - ETA: 0s - loss: 0.9016 - accuracy: 0.6261
-Epoch 5: val_accuracy did not improve from 0.61149
-199/199 [==============================] - 121s 607ms/step - loss: 0.9016 - accuracy: 0.6261 - val_loss: 1.3169 - val_accuracy: 0.4139
+187/187 [==============================] - ETA: 0s - loss: 0.8323 - accuracy: 0.6620
+Epoch 5: val_accuracy improved from 0.62331 to 0.63176, saving model to model.weights.best.hdf5
+187/187 [==============================] - 53s 284ms/step - loss: 0.8323 - accuracy: 0.6620 - val_loss: 0.9782 - val_accuracy: 0.6318
 Epoch 6/75
-199/199 [==============================] - ETA: 0s - loss: 0.8662 - accuracy: 0.6545
-Epoch 6: val_accuracy improved from 0.61149 to 0.64611, saving model to model.weights.best.hdf5
-199/199 [==============================] - 162s 812ms/step - loss: 0.8662 - accuracy: 0.6545 - val_loss: 0.8672 - val_accuracy: 0.6461
+187/187 [==============================] - ETA: 0s - loss: 0.7807 - accuracy: 0.6885
+Epoch 6: val_accuracy improved from 0.63176 to 0.66385, saving model to model.weights.best.hdf5
+187/187 [==============================] - 54s 289ms/step - loss: 0.7807 - accuracy: 0.6885 - val_loss: 0.8279 - val_accuracy: 0.6639
 Epoch 7/75
-199/199 [==============================] - ETA: 0s - loss: 0.7632 - accuracy: 0.6977
-Epoch 7: val_accuracy improved from 0.64611 to 0.69172, saving model to model.weights.best.hdf5
-199/199 [==============================] - 90s 450ms/step - loss: 0.7632 - accuracy: 0.6977 - val_loss: 0.8364 - val_accuracy: 0.6917
+187/187 [==============================] - ETA: 0s - loss: 0.7210 - accuracy: 0.7184
+Epoch 7: val_accuracy did not improve from 0.66385
+187/187 [==============================] - 55s 295ms/step - loss: 0.7210 - accuracy: 0.7184 - val_loss: 0.8631 - val_accuracy: 0.6605
 Epoch 8/75
-199/199 [==============================] - ETA: 0s - loss: 0.7342 - accuracy: 0.7180
-Epoch 8: val_accuracy did not improve from 0.69172
-199/199 [==============================] - 72s 363ms/step - loss: 0.7342 - accuracy: 0.7180 - val_loss: 0.8421 - val_accuracy: 0.6824
+187/187 [==============================] - ETA: 0s - loss: 0.6806 - accuracy: 0.7373
+Epoch 8: val_accuracy did not improve from 0.66385
+187/187 [==============================] - 56s 301ms/step - loss: 0.6806 - accuracy: 0.7373 - val_loss: 1.0503 - val_accuracy: 0.5954
 Epoch 9/75
-199/199 [==============================] - ETA: 0s - loss: 0.6863 - accuracy: 0.7367
-Epoch 9: val_accuracy did not improve from 0.69172
-199/199 [==============================] - 110s 551ms/step - loss: 0.6863 - accuracy: 0.7367 - val_loss: 1.2783 - val_accuracy: 0.5684
+187/187 [==============================] - ETA: 0s - loss: 0.6467 - accuracy: 0.7591
+Epoch 9: val_accuracy improved from 0.66385 to 0.72297, saving model to model.weights.best.hdf5
+187/187 [==============================] - 57s 305ms/step - loss: 0.6467 - accuracy: 0.7591 - val_loss: 0.7655 - val_accuracy: 0.7230
 Epoch 10/75
-199/199 [==============================] - ETA: 0s - loss: 0.6380 - accuracy: 0.7555
-Epoch 10: val_accuracy improved from 0.69172 to 0.69426, saving model to model.weights.best.hdf5
-199/199 [==============================] - 215s 1s/step - loss: 0.6380 - accuracy: 0.7555 - val_loss: 0.8455 - val_accuracy: 0.6943
+187/187 [==============================] - ETA: 0s - loss: 0.6019 - accuracy: 0.7742
+Epoch 10: val_accuracy did not improve from 0.72297
+187/187 [==============================] - 62s 328ms/step - loss: 0.6019 - accuracy: 0.7742 - val_loss: 0.8000 - val_accuracy: 0.6824
 Epoch 11/75
-199/199 [==============================] - ETA: 0s - loss: 0.6185 - accuracy: 0.7708
-Epoch 11: val_accuracy did not improve from 0.69426
-199/199 [==============================] - 209s 1s/step - loss: 0.6185 - accuracy: 0.7708 - val_loss: 0.9532 - val_accuracy: 0.6562
+187/187 [==============================] - ETA: 0s - loss: 0.5861 - accuracy: 0.7814
+Epoch 11: val_accuracy did not improve from 0.72297
+187/187 [==============================] - 63s 339ms/step - loss: 0.5861 - accuracy: 0.7814 - val_loss: 1.1027 - val_accuracy: 0.6056
 Epoch 12/75
-199/199 [==============================] - ETA: 0s - loss: 0.5720 - accuracy: 0.7921
-Epoch 12: val_accuracy did not improve from 0.69426
-199/199 [==============================] - 314s 2s/step - loss: 0.5720 - accuracy: 0.7921 - val_loss: 1.0058 - val_accuracy: 0.6461
+187/187 [==============================] - ETA: 0s - loss: 0.5565 - accuracy: 0.8003
+Epoch 12: val_accuracy improved from 0.72297 to 0.73733, saving model to model.weights.best.hdf5
+187/187 [==============================] - 64s 340ms/step - loss: 0.5565 - accuracy: 0.8003 - val_loss: 0.7498 - val_accuracy: 0.7373
 Epoch 13/75
-199/199 [==============================] - ETA: 0s - loss: 0.5427 - accuracy: 0.7995
-Epoch 13: val_accuracy improved from 0.69426 to 0.71875, saving model to model.weights.best.hdf5
-199/199 [==============================] - 367s 2s/step - loss: 0.5427 - accuracy: 0.7995 - val_loss: 0.8038 - val_accuracy: 0.7188
+187/187 [==============================] - ETA: 0s - loss: 0.5260 - accuracy: 0.8102
+Epoch 13: val_accuracy did not improve from 0.73733
+187/187 [==============================] - 64s 343ms/step - loss: 0.5260 - accuracy: 0.8102 - val_loss: 0.9608 - val_accuracy: 0.7027
 Epoch 14/75
-199/199 [==============================] - ETA: 0s - loss: 0.5319 - accuracy: 0.8115
-Epoch 14: val_accuracy did not improve from 0.71875
-199/199 [==============================] - 282s 1s/step - loss: 0.5319 - accuracy: 0.8115 - val_loss: 1.0013 - val_accuracy: 0.6917
+187/187 [==============================] - ETA: 0s - loss: 0.4956 - accuracy: 0.8300
+Epoch 14: val_accuracy did not improve from 0.73733
+187/187 [==============================] - 66s 351ms/step - loss: 0.4956 - accuracy: 0.8300 - val_loss: 0.8849 - val_accuracy: 0.6968
 Epoch 15/75
-199/199 [==============================] - ETA: 0s - loss: 0.4875 - accuracy: 0.8283
-Epoch 15: val_accuracy did not improve from 0.71875
-199/199 [==============================] - 317s 2s/step - loss: 0.4875 - accuracy: 0.8283 - val_loss: 0.8409 - val_accuracy: 0.7128
+187/187 [==============================] - ETA: 0s - loss: 0.4649 - accuracy: 0.8411
+Epoch 15: val_accuracy improved from 0.73733 to 0.74240, saving model to model.weights.best.hdf5
+187/187 [==============================] - 65s 348ms/step - loss: 0.4649 - accuracy: 0.8411 - val_loss: 0.8735 - val_accuracy: 0.7424
 Epoch 16/75
-199/199 [==============================] - ETA: 0s - loss: 0.4647 - accuracy: 0.8449
-Epoch 16: val_accuracy did not improve from 0.71875
-199/199 [==============================] - 391s 2s/step - loss: 0.4647 - accuracy: 0.8449 - val_loss: 0.9451 - val_accuracy: 0.7069
+187/187 [==============================] - ETA: 0s - loss: 0.4317 - accuracy: 0.8538
+Epoch 16: val_accuracy did not improve from 0.74240
+187/187 [==============================] - 65s 346ms/step - loss: 0.4317 - accuracy: 0.8538 - val_loss: 1.5586 - val_accuracy: 0.6706
 Epoch 17/75
-199/199 [==============================] - ETA: 0s - loss: 0.4296 - accuracy: 0.8581
-Epoch 17: val_accuracy did not improve from 0.71875
-199/199 [==============================] - 456s 2s/step - loss: 0.4296 - accuracy: 0.8581 - val_loss: 0.9284 - val_accuracy: 0.7078
+187/187 [==============================] - ETA: 0s - loss: 0.4078 - accuracy: 0.8707
+Epoch 17: val_accuracy did not improve from 0.74240
+187/187 [==============================] - 66s 351ms/step - loss: 0.4078 - accuracy: 0.8707 - val_loss: 0.9937 - val_accuracy: 0.7323
 Epoch 18/75
-199/199 [==============================] - ETA: 0s - loss: 0.4150 - accuracy: 0.8704
-Epoch 18: val_accuracy improved from 0.71875 to 0.75422, saving model to model.weights.best.hdf5
-199/199 [==============================] - 862s 4s/step - loss: 0.4150 - accuracy: 0.8704 - val_loss: 0.7863 - val_accuracy: 0.7542
+187/187 [==============================] - ETA: 0s - loss: 0.3915 - accuracy: 0.8786
+Epoch 18: val_accuracy improved from 0.74240 to 0.74662, saving model to model.weights.best.hdf5
+187/187 [==============================] - 66s 355ms/step - loss: 0.3915 - accuracy: 0.8786 - val_loss: 0.9457 - val_accuracy: 0.7466
 Epoch 19/75
-199/199 [==============================] - ETA: 0s - loss: 0.3897 - accuracy: 0.8809
-Epoch 19: val_accuracy did not improve from 0.75422
-199/199 [==============================] - 548s 3s/step - loss: 0.3897 - accuracy: 0.8809 - val_loss: 0.9484 - val_accuracy: 0.7255
+187/187 [==============================] - ETA: 0s - loss: 0.3798 - accuracy: 0.8870
+Epoch 19: val_accuracy improved from 0.74662 to 0.75169, saving model to model.weights.best.hdf5
+187/187 [==============================] - 77s 412ms/step - loss: 0.3798 - accuracy: 0.8870 - val_loss: 0.8468 - val_accuracy: 0.7517
 Epoch 20/75
-199/199 [==============================] - ETA: 0s - loss: 0.3777 - accuracy: 0.8947
-Epoch 20: val_accuracy did not improve from 0.75422
-199/199 [==============================] - 309s 2s/step - loss: 0.3777 - accuracy: 0.8947 - val_loss: 1.0745 - val_accuracy: 0.7272
+187/187 [==============================] - ETA: 0s - loss: 0.3940 - accuracy: 0.8746
+Epoch 20: val_accuracy did not improve from 0.75169
+187/187 [==============================] - 78s 417ms/step - loss: 0.3940 - accuracy: 0.8746 - val_loss: 0.8894 - val_accuracy: 0.7441
 Epoch 21/75
-199/199 [==============================] - ETA: 0s - loss: 0.3255 - accuracy: 0.9141
-Epoch 21: val_accuracy did not improve from 0.75422
-199/199 [==============================] - 88s 443ms/step - loss: 0.3255 - accuracy: 0.9141 - val_loss: 1.0914 - val_accuracy: 0.7306
+187/187 [==============================] - ETA: 0s - loss: 0.3468 - accuracy: 0.8954
+Epoch 21: val_accuracy improved from 0.75169 to 0.78547, saving model to model.weights.best.hdf5
+187/187 [==============================] - 70s 376ms/step - loss: 0.3468 - accuracy: 0.8954 - val_loss: 0.7460 - val_accuracy: 0.7855
 Epoch 22/75
-199/199 [==============================] - ETA: 0s - loss: 0.3539 - accuracy: 0.9027
-Epoch 22: val_accuracy did not improve from 0.75422
-199/199 [==============================] - 76s 380ms/step - loss: 0.3539 - accuracy: 0.9027 - val_loss: 1.2557 - val_accuracy: 0.6900
+187/187 [==============================] - ETA: 0s - loss: 0.3206 - accuracy: 0.9108
+Epoch 22: val_accuracy did not improve from 0.78547
+187/187 [==============================] - 68s 362ms/step - loss: 0.3206 - accuracy: 0.9108 - val_loss: 0.9435 - val_accuracy: 0.7373
 Epoch 23/75
-199/199 [==============================] - ETA: 0s - loss: 0.3218 - accuracy: 0.9186
-Epoch 23: val_accuracy improved from 0.75422 to 0.75591, saving model to model.weights.best.hdf5
-199/199 [==============================] - 75s 374ms/step - loss: 0.3218 - accuracy: 0.9186 - val_loss: 0.9737 - val_accuracy: 0.7559
+187/187 [==============================] - ETA: 0s - loss: 0.3162 - accuracy: 0.9145
+Epoch 23: val_accuracy did not improve from 0.78547
+187/187 [==============================] - 70s 372ms/step - loss: 0.3162 - accuracy: 0.9145 - val_loss: 1.0224 - val_accuracy: 0.7432
 Epoch 24/75
-199/199 [==============================] - ETA: 0s - loss: 0.3102 - accuracy: 0.9274
-Epoch 24: val_accuracy improved from 0.75591 to 0.78041, saving model to model.weights.best.hdf5
-199/199 [==============================] - 84s 414ms/step - loss: 0.3102 - accuracy: 0.9274 - val_loss: 0.8523 - val_accuracy: 0.7804
+187/187 [==============================] - ETA: 0s - loss: 0.2921 - accuracy: 0.9204
+Epoch 24: val_accuracy did not improve from 0.78547
+187/187 [==============================] - 67s 359ms/step - loss: 0.2921 - accuracy: 0.9204 - val_loss: 1.3478 - val_accuracy: 0.6850
 Epoch 25/75
-199/199 [==============================] - ETA: 0s - loss: 0.3436 - accuracy: 0.9142
-Epoch 25: val_accuracy improved from 0.78041 to 0.78885, saving model to model.weights.best.hdf5
-199/199 [==============================] - 68s 341ms/step - loss: 0.3436 - accuracy: 0.9142 - val_loss: 0.8085 - val_accuracy: 0.7889
+187/187 [==============================] - ETA: 0s - loss: 0.3020 - accuracy: 0.9246
+Epoch 25: val_accuracy did not improve from 0.78547
+187/187 [==============================] - 66s 351ms/step - loss: 0.3020 - accuracy: 0.9246 - val_loss: 1.6840 - val_accuracy: 0.7078
 Epoch 26/75
-199/199 [==============================] - ETA: 0s - loss: 0.2810 - accuracy: 0.9373
-Epoch 26: val_accuracy did not improve from 0.78885
-199/199 [==============================] - 60s 303ms/step - loss: 0.2810 - accuracy: 0.9373 - val_loss: 1.0272 - val_accuracy: 0.7753
+187/187 [==============================] - ETA: 0s - loss: 0.3152 - accuracy: 0.9251
+Epoch 26: val_accuracy did not improve from 0.78547
+187/187 [==============================] - 64s 344ms/step - loss: 0.3152 - accuracy: 0.9251 - val_loss: 1.1069 - val_accuracy: 0.7492
 Epoch 27/75
-199/199 [==============================] - ETA: 0s - loss: 0.2772 - accuracy: 0.9442
-Epoch 27: val_accuracy did not improve from 0.78885
-199/199 [==============================] - 63s 314ms/step - loss: 0.2772 - accuracy: 0.9442 - val_loss: 1.3490 - val_accuracy: 0.7264
-Epoch 28/75
-199/199 [==============================] - ETA: 0s - loss: 0.2851 - accuracy: 0.9416
-Epoch 28: val_accuracy improved from 0.78885 to 0.79814, saving model to model.weights.best.hdf5
-199/199 [==============================] - 65s 328ms/step - loss: 0.2851 - accuracy: 0.9416 - val_loss: 0.8868 - val_accuracy: 0.7981
-Epoch 29/75
-199/199 [==============================] - ETA: 0s - loss: 0.2733 - accuracy: 0.9463
-Epoch 29: val_accuracy did not improve from 0.79814
-199/199 [==============================] - 61s 309ms/step - loss: 0.2733 - accuracy: 0.9463 - val_loss: 1.2026 - val_accuracy: 0.7559
-Epoch 30/75
-199/199 [==============================] - ETA: 0s - loss: 0.2575 - accuracy: 0.9527
-Epoch 30: val_accuracy did not improve from 0.79814
-199/199 [==============================] - 66s 330ms/step - loss: 0.2575 - accuracy: 0.9527 - val_loss: 1.0596 - val_accuracy: 0.7720
-Epoch 31/75
-199/199 [==============================] - ETA: 0s - loss: 0.2710 - accuracy: 0.9499
-Epoch 31: val_accuracy did not improve from 0.79814
-199/199 [==============================] - 63s 314ms/step - loss: 0.2710 - accuracy: 0.9499 - val_loss: 1.1921 - val_accuracy: 0.7660
-Epoch 32/75
-199/199 [==============================] - ETA: 0s - loss: 0.2747 - accuracy: 0.9497
-Epoch 32: val_accuracy did not improve from 0.79814
-199/199 [==============================] - 62s 311ms/step - loss: 0.2747 - accuracy: 0.9497 - val_loss: 0.9975 - val_accuracy: 0.7720
-Epoch 33/75
-199/199 [==============================] - ETA: 0s - loss: 0.2933 - accuracy: 0.9444
-Epoch 33: val_accuracy did not improve from 0.79814
-199/199 [==============================] - 63s 317ms/step - loss: 0.2933 - accuracy: 0.9444 - val_loss: 1.1854 - val_accuracy: 0.7559
-Epoch 34/75
-199/199 [==============================] - ETA: 0s - loss: 0.2823 - accuracy: 0.9532Restoring model weights from the end of the best epoch: 28.
+187/187 [==============================] - ETA: 0s - loss: 0.2908 - accuracy: 0.9334Restoring model weights from the end of the best epoch: 21.
 
-Epoch 34: val_accuracy did not improve from 0.79814
-199/199 [==============================] - 62s 312ms/step - loss: 0.2823 - accuracy: 0.9532 - val_loss: 0.9733 - val_accuracy: 0.7863
-Epoch 34: early stopping
+Epoch 27: val_accuracy did not improve from 0.78547
+187/187 [==============================] - 67s 360ms/step - loss: 0.2908 - accuracy: 0.9334 - val_loss: 0.9700 - val_accuracy: 0.7812
+Epoch 27: early stopping
 </pre></div>
 </div>
 </div>
@@ -1098,7 +1072,7 @@ Epoch 34: early stopping
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Loss&#39;)
 </pre></div>
 </div>
-<img alt="_images/abbd89c1a7b8d9b594bf0fbacf973e59a5ac12fabd203c4c4efe780805bd34a8.png" src="_images/abbd89c1a7b8d9b594bf0fbacf973e59a5ac12fabd203c4c4efe780805bd34a8.png" />
+<img alt="_images/02b63233bfe26909c517940d1d15be6e3efba5ec7da518302d58236ad0783abf.png" src="_images/02b63233bfe26909c517940d1d15be6e3efba5ec7da518302d58236ad0783abf.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1121,10 +1095,10 @@ Epoch 34: early stopping
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.2742581650614738, 1.0)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.2858868524432182, 1.0)
 </pre></div>
 </div>
-<img alt="_images/a87b11e7412c7efc62e215d76efde63cf73a4194039d538837b332c3b5f82c43.png" src="_images/a87b11e7412c7efc62e215d76efde63cf73a4194039d538837b332c3b5f82c43.png" />
+<img alt="_images/62f8488bb235012c8a9d218f461f70dadce5ba25e2f2d0a32845e6b153ccc65d.png" src="_images/62f8488bb235012c8a9d218f461f70dadce5ba25e2f2d0a32845e6b153ccc65d.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1141,8 +1115,8 @@ Epoch 34: early stopping
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12/12 [==============================] - 9s 769ms/step - loss: 0.8505 - accuracy: 0.7839
-Test accuracy = 78.38541865348816%
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25/25 [==============================] - 37s 2s/step - loss: 0.7320 - accuracy: 0.8012
+Test accuracy = 80.12499809265137%
 </pre></div>
 </div>
 </div>
@@ -1207,26 +1181,26 @@ Test accuracy = 78.38541865348816%
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200/200 [==============================] - 21s 106ms/step
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>188/188 [==============================] - 29s 153ms/step
 Confusion Matrix
-[[633 389 433 441]
- [408 289 295 339]
- [490 316 336 364]
- [516 353 407 388]]
+[[565 328 414 459]
+ [398 211 332 316]
+ [447 254 330 375]
+ [510 315 370 373]]
 Classification Report
               precision    recall  f1-score   support
 
-        cane       0.31      0.33      0.32      1896
-       gatto       0.21      0.22      0.22      1331
-       mucca       0.23      0.22      0.23      1506
-       ragno       0.25      0.23      0.24      1664
+        cane       0.29      0.32      0.31      1766
+       gatto       0.19      0.17      0.18      1257
+       mucca       0.23      0.23      0.23      1406
+       ragno       0.24      0.24      0.24      1568
 
-    accuracy                           0.26      6397
-   macro avg       0.25      0.25      0.25      6397
-weighted avg       0.26      0.26      0.26      6397
+    accuracy                           0.25      5997
+   macro avg       0.24      0.24      0.24      5997
+weighted avg       0.24      0.25      0.25      5997
 </pre></div>
 </div>
-<img alt="_images/0fec8f834b51fc0f7fd7d4d3b9442246544bae7f838f873e9cb8bd5bf8195fe8.png" src="_images/0fec8f834b51fc0f7fd7d4d3b9442246544bae7f838f873e9cb8bd5bf8195fe8.png" />
+<img alt="_images/c02646abf05f6bddfc24469eb8006d73b261a1e7bd8b3229ecc32ec550a86c83.png" src="_images/c02646abf05f6bddfc24469eb8006d73b261a1e7bd8b3229ecc32ec550a86c83.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1270,26 +1244,26 @@ weighted avg       0.26      0.26      0.26      6397
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>38/38 [==============================] - 5s 133ms/step
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>38/38 [==============================] - 5s 136ms/step
 Confusion Matrix
-[[100  82  67  81]
- [ 84  53  55  72]
- [112  53  52  57]
- [110  72  77  73]]
+[[105  62  87  82]
+ [ 75  53  64  62]
+ [101  45  55  68]
+ [109  54  75 103]]
 Classification Report
               precision    recall  f1-score   support
 
-        cane       0.25      0.30      0.27       330
-       gatto       0.20      0.20      0.20       264
-       mucca       0.21      0.19      0.20       274
-       ragno       0.26      0.22      0.24       332
+        cane       0.27      0.31      0.29       336
+       gatto       0.25      0.21      0.23       254
+       mucca       0.20      0.20      0.20       269
+       ragno       0.33      0.30      0.31       341
 
-    accuracy                           0.23      1200
-   macro avg       0.23      0.23      0.23      1200
-weighted avg       0.23      0.23      0.23      1200
+    accuracy                           0.26      1200
+   macro avg       0.26      0.26      0.26      1200
+weighted avg       0.26      0.26      0.26      1200
 </pre></div>
 </div>
-<img alt="_images/f0e69576208c66d3bd9e44d2f2db374382aab0ac3d2af80251c7ea095e94bbbc.png" src="_images/f0e69576208c66d3bd9e44d2f2db374382aab0ac3d2af80251c7ea095e94bbbc.png" />
+<img alt="_images/b1672b3abab297896f89adb4bd9c955efb21984074969972fa6cfdc7e38d7e6e.png" src="_images/b1672b3abab297896f89adb4bd9c955efb21984074969972fa6cfdc7e38d7e6e.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1335,26 +1309,26 @@ weighted avg       0.23      0.23      0.23      1200
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13/13 [==============================] - 1s 100ms/step
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25/25 [==============================] - 4s 146ms/step
 Confusion Matrix
-[[47 24 23 27]
- [30 11 17 15]
- [25 16 24 21]
- [45 23 17 35]]
+[[84 35 67 59]
+ [47 34 41 35]
+ [72 24 52 43]
+ [67 40 42 58]]
 Classification Report
               precision    recall  f1-score   support
 
-        cane       0.32      0.39      0.35       121
-       gatto       0.15      0.15      0.15        73
-       mucca       0.30      0.28      0.29        86
-       ragno       0.36      0.29      0.32       120
+        cane       0.31      0.34      0.33       245
+       gatto       0.26      0.22      0.23       157
+       mucca       0.26      0.27      0.26       191
+       ragno       0.30      0.28      0.29       207
 
-    accuracy                           0.29       400
-   macro avg       0.28      0.28      0.28       400
-weighted avg       0.29      0.29      0.29       400
+    accuracy                           0.28       800
+   macro avg       0.28      0.28      0.28       800
+weighted avg       0.28      0.28      0.28       800
 </pre></div>
 </div>
-<img alt="_images/2fcf978e5beda5f4fc9622f8e9e37f3e28ba3689cfb86c6ba3bf3d9d6c7be350.png" src="_images/2fcf978e5beda5f4fc9622f8e9e37f3e28ba3689cfb86c6ba3bf3d9d6c7be350.png" />
+<img alt="_images/c34b1628444c9f475f7e9fecb406065eef6a38dec78baa435ea5e61d7f92eb56.png" src="_images/c34b1628444c9f475f7e9fecb406065eef6a38dec78baa435ea5e61d7f92eb56.png" />
 </div>
 </div>
 </section>
@@ -1369,7 +1343,7 @@ weighted avg       0.29      0.29      0.29       400
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/1 [==============================] - 0s 223ms/step
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1/1 [==============================] - 0s 26ms/step
 </pre></div>
 </div>
 </div>
@@ -1390,7 +1364,7 @@ weighted avg       0.29      0.29      0.29       400
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/aeb3268215b67fdc95e327a8248b7d9f0024239f2b7f35386ed4b42256481253.png" src="_images/aeb3268215b67fdc95e327a8248b7d9f0024239f2b7f35386ed4b42256481253.png" />
+<img alt="_images/f2d3e2fd32f9330514ca54b8ac65eb4f530f460639698fe8f294fbf4ac157c86.png" src="_images/f2d3e2fd32f9330514ca54b8ac65eb4f530f460639698fe8f294fbf4ac157c86.png" />
 </div>
 </div>
 </section>
@@ -1427,6 +1401,24 @@ weighted avg       0.29      0.29      0.29       400
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">CNN para Reconocimiento de Animales y Edad de Edificaciones</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="MODEL_Age_DG.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Modelo para edad</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
